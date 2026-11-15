@@ -1,0 +1,1129 @@
+{
+  "target": "R Draconis",
+  "input": {
+    "target": "R Draconis",
+    "ra": null,
+    "dec": null
+  },
+  "position_source": "SIMBAD object 'V* R Dra', 2026-11-14 PT; ICRS J2000 from Gaia EDR3 (2020yCat.1350....0G).",
+  "band": "SPHEREx-D1",
+  "bands_available": [
+    "SPHEREx-D1",
+    "SPHEREx-D2",
+    "SPHEREx-D3",
+    "SPHEREx-D4",
+    "SPHEREx-D5",
+    "SPHEREx-D6"
+  ],
+  "n_images_all_bands": 545,
+  "n_selected": 48,
+  "n_frames_used": 48,
+  "failed_or_skipped": [],
+  "center_ra_deg": 248.167234,
+  "center_dec_deg": 66.755024,
+  "center_epoch_year": 2025.957,
+  "cutout_size_deg": 0.05,
+  "collections_used": [
+    "spherex_dr1",
+    "spherex_qr3"
+  ],
+  "date_range_utc": [
+    "2025-06-06",
+    "2026-07-16"
+  ],
+  "epochs": [
+    {
+      "epoch": 0,
+      "n_frames": 16,
+      "mjd_mean": 60863.955,
+      "date_range_utc": "2025-06-06 to 2025-07-22",
+      "wavelength_range_um": [
+        0.744,
+        1.096
+      ],
+      "meas_dra_arcsec": -0.62,
+      "meas_ddec_arcsec": 0.22,
+      "snr": 1211.7,
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0
+    },
+    {
+      "epoch": 1,
+      "n_frames": 16,
+      "mjd_mean": 60980.115,
+      "date_range_utc": "2025-10-17 to 2025-11-20",
+      "wavelength_range_um": [
+        0.77,
+        1.084
+      ],
+      "meas_dra_arcsec": 0.46,
+      "meas_ddec_arcsec": -0.33,
+      "snr": 4550.7,
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0
+    },
+    {
+      "epoch": 2,
+      "n_frames": 16,
+      "mjd_mean": 61232.294,
+      "date_range_utc": "2026-07-06 to 2026-07-16",
+      "wavelength_range_um": [
+        0.745,
+        1.122
+      ],
+      "meas_dra_arcsec": -0.32,
+      "meas_ddec_arcsec": -0.23,
+      "snr": 1860.8,
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0
+    }
+  ],
+  "motion": {
+    "n_frames_used": 48,
+    "pm_ra_cosdec_arcsec_yr": 0.06,
+    "pm_ra_err": 0.4,
+    "pm_dec_arcsec_yr": -0.0,
+    "pm_dec_err": 0.51,
+    "baseline_yr": 1.11,
+    "stack_pm_ra_cosdec_arcsec_yr": 0.07,
+    "stack_pm_ra_err": 1.08,
+    "stack_pm_dec_arcsec_yr": -0.35,
+    "stack_pm_dec_err": 0.45,
+    "catalog_pm_ra_cosdec_arcsec_yr": -0.021,
+    "catalog_pm_dec_arcsec_yr": 0.006,
+    "first_to_last_epoch_shift_arcsec": 0.54,
+    "first_to_last_epoch_dt_yr": 1.008,
+    "predicted_shift_arcsec": 0.02,
+    "control_star_first_to_last_shift_arcsec": [],
+    "control_zero_point_last_epoch_arcsec": [
+      0.0,
+      0.0
+    ]
+  },
+  "matched_wavelength_brightness": [],
+  "saturation_or_artifact_flags_frames": 48,
+  "saturated_frames": 48,
+  "frames": [
+    {
+      "mjd": 60832.47455,
+      "date_utc": "2025-06-06 11:23",
+      "epoch": 0,
+      "obs_id": "2025W23_2B_0206_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9436,
+      "bandwidth_um": 0.0241,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.27,
+      "meas_ddec_arcsec": 0.28,
+      "flux_mjy": 31601.172,
+      "flux_err_mjy": 21.08,
+      "snr": 1499.1
+    },
+    {
+      "mjd": 60832.47605,
+      "date_utc": "2025-06-06 11:25",
+      "epoch": 0,
+      "obs_id": "2025W23_2B_0206_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9662,
+      "bandwidth_um": 0.0249,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.26,
+      "meas_ddec_arcsec": 0.27,
+      "flux_mjy": 39615.64,
+      "flux_err_mjy": 17.836,
+      "snr": 2221.1
+    },
+    {
+      "mjd": 60832.47903,
+      "date_utc": "2025-06-06 11:29",
+      "epoch": 0,
+      "obs_id": "2025W23_2B_0206_4",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0127,
+      "bandwidth_um": 0.027,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.27,
+      "meas_ddec_arcsec": 0.0,
+      "flux_mjy": 42370.176,
+      "flux_err_mjy": 17.638,
+      "snr": 2402.2
+    },
+    {
+      "mjd": 60860.54086,
+      "date_utc": "2025-07-04 12:58",
+      "epoch": 0,
+      "obs_id": "2025W27_2A_0243_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0373,
+      "bandwidth_um": 0.0275,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.63,
+      "meas_ddec_arcsec": 0.6,
+      "flux_mjy": 37011.349,
+      "flux_err_mjy": 31.121,
+      "snr": 1189.3
+    },
+    {
+      "mjd": 60861.96285,
+      "date_utc": "2025-07-05 23:06",
+      "epoch": 0,
+      "obs_id": "2025W27_2A_0557_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0617,
+      "bandwidth_um": 0.0281,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.26,
+      "meas_ddec_arcsec": 0.26,
+      "flux_mjy": 34396.367,
+      "flux_err_mjy": 18.138,
+      "snr": 1896.3
+    },
+    {
+      "mjd": 60861.96435,
+      "date_utc": "2025-07-05 23:08",
+      "epoch": 0,
+      "obs_id": "2025W27_2A_0557_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0874,
+      "bandwidth_um": 0.029,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -1.15,
+      "meas_ddec_arcsec": -1.01,
+      "flux_mjy": 7098.074,
+      "flux_err_mjy": 7.518,
+      "snr": 944.2
+    },
+    {
+      "mjd": 60870.7282,
+      "date_utc": "2025-07-14 17:28",
+      "epoch": 0,
+      "obs_id": "2025W29_1A_0141_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7445,
+      "bandwidth_um": 0.0174,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.47,
+      "meas_ddec_arcsec": -2.0,
+      "flux_mjy": 10841.205,
+      "flux_err_mjy": 2.104,
+      "snr": 5153.0
+    },
+    {
+      "mjd": 60870.72969,
+      "date_utc": "2025-07-14 17:30",
+      "epoch": 0,
+      "obs_id": "2025W29_1A_0141_3",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.762,
+      "bandwidth_um": 0.0182,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(24px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 1.68,
+      "meas_ddec_arcsec": -2.7,
+      "flux_mjy": 11372.568,
+      "flux_err_mjy": 1.727,
+      "snr": 6584.5
+    },
+    {
+      "mjd": 60873.44444,
+      "date_utc": "2025-07-17 10:39",
+      "epoch": 0,
+      "obs_id": "2025W29_1A_0676_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.856,
+      "bandwidth_um": 0.0215,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -1.32,
+      "meas_ddec_arcsec": 1.54,
+      "flux_mjy": 16196.419,
+      "flux_err_mjy": 3.447,
+      "snr": 4698.1
+    },
+    {
+      "mjd": 60873.44593,
+      "date_utc": "2025-07-17 10:42",
+      "epoch": 0,
+      "obs_id": "2025W29_1A_0676_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8766,
+      "bandwidth_um": 0.0222,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.34,
+      "meas_ddec_arcsec": 1.24,
+      "flux_mjy": 16566.271,
+      "flux_err_mjy": 5.037,
+      "snr": 3289.0
+    },
+    {
+      "mjd": 60873.44892,
+      "date_utc": "2025-07-17 10:46",
+      "epoch": 0,
+      "obs_id": "2025W29_1A_0676_4",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9188,
+      "bandwidth_um": 0.0234,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.26,
+      "meas_ddec_arcsec": -0.27,
+      "flux_mjy": 33002.125,
+      "flux_err_mjy": 12.122,
+      "snr": 2722.6
+    },
+    {
+      "mjd": 60874.66718,
+      "date_utc": "2025-07-18 16:00",
+      "epoch": 0,
+      "obs_id": "2025W29_2A_0288_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7983,
+      "bandwidth_um": 0.0197,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -1.04,
+      "meas_ddec_arcsec": -0.19,
+      "flux_mjy": 13055.593,
+      "flux_err_mjy": 2.569,
+      "snr": 5082.8
+    },
+    {
+      "mjd": 60874.67017,
+      "date_utc": "2025-07-18 16:05",
+      "epoch": 0,
+      "obs_id": "2025W29_2A_0288_3",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8365,
+      "bandwidth_um": 0.021,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.48,
+      "meas_ddec_arcsec": -1.43,
+      "flux_mjy": 10494.321,
+      "flux_err_mjy": 4.502,
+      "snr": 2331.1
+    },
+    {
+      "mjd": 60874.87052,
+      "date_utc": "2025-07-18 20:53",
+      "epoch": 0,
+      "obs_id": "2025W29_2A_0351_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9406,
+      "bandwidth_um": 0.0239,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -1.38,
+      "meas_ddec_arcsec": -0.4,
+      "flux_mjy": 22419.71,
+      "flux_err_mjy": 5.479,
+      "snr": 4092.0
+    },
+    {
+      "mjd": 60876.7748,
+      "date_utc": "2025-07-20 18:35",
+      "epoch": 0,
+      "obs_id": "2025W29_2A_0805_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0961,
+      "bandwidth_um": 0.0289,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.26,
+      "meas_ddec_arcsec": -0.26,
+      "flux_mjy": 42081.157,
+      "flux_err_mjy": 28.083,
+      "snr": 1498.5
+    },
+    {
+      "mjd": 60878.60889,
+      "date_utc": "2025-07-22 14:36",
+      "epoch": 0,
+      "obs_id": "2025W30_1B_0289_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0705,
+      "bandwidth_um": 0.0284,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.01,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.27,
+      "meas_ddec_arcsec": -0.0,
+      "flux_mjy": 40925.362,
+      "flux_err_mjy": 18.496,
+      "snr": 2212.7
+    },
+    {
+      "mjd": 60965.61517,
+      "date_utc": "2025-10-17 14:45",
+      "epoch": 1,
+      "obs_id": "2025W42_2A_0244_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7808,
+      "bandwidth_um": 0.0186,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(18px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.25,
+      "meas_ddec_arcsec": -1.25,
+      "flux_mjy": 3022.523,
+      "flux_err_mjy": 0.566,
+      "snr": 5344.7
+    },
+    {
+      "mjd": 60965.61967,
+      "date_utc": "2025-10-17 14:52",
+      "epoch": 1,
+      "obs_id": "2025W42_2A_0244_4",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8378,
+      "bandwidth_um": 0.0211,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 1.64,
+      "meas_ddec_arcsec": 0.96,
+      "flux_mjy": 3943.302,
+      "flux_err_mjy": 1.78,
+      "snr": 2214.8
+    },
+    {
+      "mjd": 60966.97213,
+      "date_utc": "2025-10-18 23:19",
+      "epoch": 1,
+      "obs_id": "2025W42_2A_0513_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8777,
+      "bandwidth_um": 0.0223,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.87,
+      "meas_ddec_arcsec": 0.18,
+      "flux_mjy": 12290.216,
+      "flux_err_mjy": 2.906,
+      "snr": 4229.4
+    },
+    {
+      "mjd": 60967.04054,
+      "date_utc": "2025-10-19 00:58",
+      "epoch": 1,
+      "obs_id": "2025W42_2A_0526_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9416,
+      "bandwidth_um": 0.0244,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.33,
+      "meas_ddec_arcsec": -0.21,
+      "flux_mjy": 13178.41,
+      "flux_err_mjy": 3.755,
+      "snr": 3509.5
+    },
+    {
+      "mjd": 60967.44809,
+      "date_utc": "2025-10-19 10:45",
+      "epoch": 1,
+      "obs_id": "2025W42_2A_0617_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0101,
+      "bandwidth_um": 0.0268,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.22,
+      "meas_ddec_arcsec": -0.28,
+      "flux_mjy": 22104.586,
+      "flux_err_mjy": 10.999,
+      "snr": 2009.7
+    },
+    {
+      "mjd": 60967.45257,
+      "date_utc": "2025-10-19 10:51",
+      "epoch": 1,
+      "obs_id": "2025W42_2A_0617_4",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0841,
+      "bandwidth_um": 0.0286,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.0,
+      "meas_ddec_arcsec": -0.27,
+      "flux_mjy": 36826.364,
+      "flux_err_mjy": 13.108,
+      "snr": 2809.6
+    },
+    {
+      "mjd": 60973.56001,
+      "date_utc": "2025-10-25 13:26",
+      "epoch": 1,
+      "obs_id": "2025W43_2A_0464_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.847,
+      "bandwidth_um": 0.0213,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.8,
+      "meas_ddec_arcsec": 2.82,
+      "flux_mjy": 4374.789,
+      "flux_err_mjy": 1.678,
+      "snr": 2607.7
+    },
+    {
+      "mjd": 60984.28828,
+      "date_utc": "2025-11-05 06:55",
+      "epoch": 1,
+      "obs_id": "2025W45_1A_0515_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7713,
+      "bandwidth_um": 0.0185,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(21px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -1.53,
+      "meas_ddec_arcsec": -1.0,
+      "flux_mjy": 2700.01,
+      "flux_err_mjy": 1.009,
+      "snr": 2675.5
+    },
+    {
+      "mjd": 60984.29126,
+      "date_utc": "2025-11-05 06:59",
+      "epoch": 1,
+      "obs_id": "2025W45_1A_0515_3",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8085,
+      "bandwidth_um": 0.0201,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.26,
+      "meas_ddec_arcsec": -0.31,
+      "flux_mjy": 16201.204,
+      "flux_err_mjy": 2.39,
+      "snr": 6778.0
+    },
+    {
+      "mjd": 60984.83696,
+      "date_utc": "2025-11-05 20:05",
+      "epoch": 1,
+      "obs_id": "2025W45_1A_0638_3",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9344,
+      "bandwidth_um": 0.0239,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.22,
+      "meas_ddec_arcsec": 0.31,
+      "flux_mjy": 27347.575,
+      "flux_err_mjy": 11.116,
+      "snr": 2460.3
+    },
+    {
+      "mjd": 60987.48472,
+      "date_utc": "2025-11-08 11:37",
+      "epoch": 1,
+      "obs_id": "2025W45_2A_0430_2",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0026,
+      "bandwidth_um": 0.0266,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "PERSIST",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.6,
+      "meas_ddec_arcsec": -0.61,
+      "flux_mjy": 20161.863,
+      "flux_err_mjy": 14.684,
+      "snr": 1373.0
+    },
+    {
+      "mjd": 60987.61828,
+      "date_utc": "2025-11-08 14:50",
+      "epoch": 1,
+      "obs_id": "2025W45_2A_0458_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0761,
+      "bandwidth_um": 0.0285,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.25,
+      "meas_ddec_arcsec": 0.23,
+      "flux_mjy": 21781.028,
+      "flux_err_mjy": 17.23,
+      "snr": 1264.1
+    },
+    {
+      "mjd": 60993.25383,
+      "date_utc": "2025-11-14 06:05",
+      "epoch": 1,
+      "obs_id": "2025W46_2A_0163_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7699,
+      "bandwidth_um": 0.0176,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(23px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 2.19,
+      "meas_ddec_arcsec": -1.16,
+      "flux_mjy": 2391.385,
+      "flux_err_mjy": 1.292,
+      "snr": 1851.2
+    },
+    {
+      "mjd": 60993.25831,
+      "date_utc": "2025-11-14 06:11",
+      "epoch": 1,
+      "obs_id": "2025W46_2A_0163_4",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8256,
+      "bandwidth_um": 0.0202,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 0.81,
+      "meas_ddec_arcsec": -0.98,
+      "flux_mjy": 19587.959,
+      "flux_err_mjy": 5.831,
+      "snr": 3359.5
+    },
+    {
+      "mjd": 60993.46165,
+      "date_utc": "2025-11-14 11:04",
+      "epoch": 1,
+      "obs_id": "2025W46_2A_0205_3",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8851,
+      "bandwidth_um": 0.0221,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": -0.28,
+      "meas_ddec_arcsec": -0.23,
+      "flux_mjy": 23912.166,
+      "flux_err_mjy": 12.745,
+      "snr": 1876.2
+    },
+    {
+      "mjd": 60999.6375,
+      "date_utc": "2025-11-20 15:18",
+      "epoch": 1,
+      "obs_id": "2025W47_2A_0033_1",
+      "collection": "spherex_dr1",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8255,
+      "bandwidth_um": 0.0202,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": 0.0,
+      "pred_ddec_arcsec": -0.0,
+      "meas_dra_arcsec": 1.21,
+      "meas_ddec_arcsec": 0.18,
+      "flux_mjy": 18989.35,
+      "flux_err_mjy": 8.719,
+      "snr": 2177.9
+    },
+    {
+      "mjd": 61227.48519,
+      "date_utc": "2026-07-06 11:38",
+      "epoch": 2,
+      "obs_id": "2026W28_1A_0104_1",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0082,
+      "bandwidth_um": 0.027,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -1.07,
+      "meas_ddec_arcsec": -0.55,
+      "flux_mjy": 21795.562,
+      "flux_err_mjy": 13.493,
+      "snr": 1615.3
+    },
+    {
+      "mjd": 61227.4882,
+      "date_utc": "2026-07-06 11:43",
+      "epoch": 2,
+      "obs_id": "2026W28_1A_0104_3",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0569,
+      "bandwidth_um": 0.0281,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -0.54,
+      "meas_ddec_arcsec": -0.33,
+      "flux_mjy": 21448.906,
+      "flux_err_mjy": 16.846,
+      "snr": 1273.2
+    },
+    {
+      "mjd": 61227.48969,
+      "date_utc": "2026-07-06 11:45",
+      "epoch": 2,
+      "obs_id": "2026W28_1A_0104_4",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0825,
+      "bandwidth_um": 0.029,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(24px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 4.13,
+      "meas_ddec_arcsec": 7.17,
+      "flux_mjy": 7931.133,
+      "flux_err_mjy": 8.303,
+      "snr": 955.2
+    },
+    {
+      "mjd": 61229.72629,
+      "date_utc": "2026-07-08 17:25",
+      "epoch": 2,
+      "obs_id": "2026W28_1A_0671_2",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9619,
+      "bandwidth_um": 0.0247,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -0.53,
+      "meas_ddec_arcsec": -0.61,
+      "flux_mjy": 33676.71,
+      "flux_err_mjy": 10.52,
+      "snr": 3201.2
+    },
+    {
+      "mjd": 61229.72779,
+      "date_utc": "2026-07-08 17:28",
+      "epoch": 2,
+      "obs_id": "2026W28_1A_0671_3",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.985,
+      "bandwidth_um": 0.0259,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 0.23,
+      "meas_ddec_arcsec": -0.25,
+      "flux_mjy": 26939.527,
+      "flux_err_mjy": 11.665,
+      "snr": 2309.4
+    },
+    {
+      "mjd": 61230.94861,
+      "date_utc": "2026-07-09 22:45",
+      "epoch": 2,
+      "obs_id": "2026W28_2A_0106_2",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9619,
+      "bandwidth_um": 0.0247,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "PERSIST",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 0.27,
+      "meas_ddec_arcsec": -0.22,
+      "flux_mjy": 26549.261,
+      "flux_err_mjy": 13.331,
+      "snr": 1991.5
+    },
+    {
+      "mjd": 61232.37332,
+      "date_utc": "2026-07-11 08:57",
+      "epoch": 2,
+      "obs_id": "2026W28_2A_0364_2",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7449,
+      "bandwidth_um": 0.0178,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(23px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -3.44,
+      "meas_ddec_arcsec": -1.94,
+      "flux_mjy": 1449.463,
+      "flux_err_mjy": 1.382,
+      "snr": 1048.7
+    },
+    {
+      "mjd": 61232.37631,
+      "date_utc": "2026-07-11 09:01",
+      "epoch": 2,
+      "obs_id": "2026W28_2A_0364_4",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7802,
+      "bandwidth_um": 0.0193,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(22px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 1.29,
+      "meas_ddec_arcsec": -1.93,
+      "flux_mjy": 2299.046,
+      "flux_err_mjy": 1.004,
+      "snr": 2289.1
+    },
+    {
+      "mjd": 61232.44197,
+      "date_utc": "2026-07-11 10:36",
+      "epoch": 2,
+      "obs_id": "2026W28_2A_0376_1",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8978,
+      "bandwidth_um": 0.0229,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 0.34,
+      "meas_ddec_arcsec": 0.15,
+      "flux_mjy": 20334.073,
+      "flux_err_mjy": 12.01,
+      "snr": 1693.1
+    },
+    {
+      "mjd": 61232.44495,
+      "date_utc": "2026-07-11 10:40",
+      "epoch": 2,
+      "obs_id": "2026W28_2A_0376_3",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.9412,
+      "bandwidth_um": 0.0238,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -0.95,
+      "meas_ddec_arcsec": -0.53,
+      "flux_mjy": 16715.581,
+      "flux_err_mjy": 8.183,
+      "snr": 2042.7
+    },
+    {
+      "mjd": 61234.06956,
+      "date_utc": "2026-07-13 01:40",
+      "epoch": 2,
+      "obs_id": "2026W29_1A_0015_1",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.7987,
+      "bandwidth_um": 0.0199,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 0.81,
+      "meas_ddec_arcsec": -2.66,
+      "flux_mjy": 5111.375,
+      "flux_err_mjy": 1.643,
+      "snr": 3110.5
+    },
+    {
+      "mjd": 61234.07254,
+      "date_utc": "2026-07-13 01:44",
+      "epoch": 2,
+      "obs_id": "2026W29_1A_0015_3",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.837,
+      "bandwidth_um": 0.0209,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 0.92,
+      "meas_ddec_arcsec": 0.65,
+      "flux_mjy": 5756.855,
+      "flux_err_mjy": 2.941,
+      "snr": 1957.5
+    },
+    {
+      "mjd": 61234.07403,
+      "date_utc": "2026-07-13 01:46",
+      "epoch": 2,
+      "obs_id": "2026W29_1A_0015_4",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8566,
+      "bandwidth_um": 0.0214,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -1.75,
+      "meas_ddec_arcsec": -1.27,
+      "flux_mjy": 3740.434,
+      "flux_err_mjy": 2.036,
+      "snr": 1837.5
+    },
+    {
+      "mjd": 61236.24182,
+      "date_utc": "2026-07-15 05:48",
+      "epoch": 2,
+      "obs_id": "2026W29_1A_0430_1",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 0.8771,
+      "bandwidth_um": 0.0221,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -0.22,
+      "meas_ddec_arcsec": -0.66,
+      "flux_mjy": 21562.538,
+      "flux_err_mjy": 7.669,
+      "snr": 2811.5
+    },
+    {
+      "mjd": 61237.87092,
+      "date_utc": "2026-07-16 20:54",
+      "epoch": 2,
+      "obs_id": "2026W29_2A_0079_1",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.0712,
+      "bandwidth_um": 0.0283,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": 0.26,
+      "meas_ddec_arcsec": -0.26,
+      "flux_mjy": 33479.449,
+      "flux_err_mjy": 12.07,
+      "snr": 2773.9
+    },
+    {
+      "mjd": 61237.8739,
+      "date_utc": "2026-07-16 20:58",
+      "epoch": 2,
+      "obs_id": "2026W29_2A_0079_3",
+      "collection": "spherex_qr3",
+      "band": "SPHEREx-D1",
+      "wavelength_um": 1.1225,
+      "bandwidth_um": 0.0292,
+      "warn_flags_at_target": [
+        "OVERFLOW",
+        "SATURATED(25px)"
+      ],
+      "pred_dra_arcsec": -0.01,
+      "pred_ddec_arcsec": 0.0,
+      "meas_dra_arcsec": -0.26,
+      "meas_ddec_arcsec": 0.26,
+      "flux_mjy": 37674.717,
+      "flux_err_mjy": 12.121,
+      "snr": 3108.3
+    }
+  ],
+  "runtime_s": 5.7,
+  "mp4": true,
+  "files": [
+    "r_draconis_blink_all_visits.gif",
+    "r_draconis_blink_all_visits.mp4",
+    "r_draconis_blink_epochs.gif",
+    "r_draconis_first_last_diff.png",
+    "r_draconis_lightcurve.png",
+    "r_draconis_motion.png",
+    "r_draconis_summary.json"
+  ]
+}

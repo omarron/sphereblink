@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SphereBlink — blink SPHEREx visits to find things that move or change</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#0b1020;color:#e8ecf5;line-height:1.5}
+header,main,footer{max-width:1050px;margin:auto;padding:0 18px}
+header{padding-top:28px} h1{margin:0 0 4px;font-size:2.1em} .tag{color:#9fb3d9}
+a{color:#7cc7ff} .card{background:#141b33;border-radius:12px;padding:16px 20px;margin:22px 0}
+.band{font-size:.6em;background:#24305a;padding:2px 8px;border-radius:6px;vertical-align:middle}
+.verdict{font-weight:600;color:#ffd479;margin:4px 0} .meta,.small{color:#9fb3d9;font-size:.9em}
+.row{display:flex;flex-wrap:wrap;gap:16px} figure{margin:8px 0;flex:1 1 300px} figure img{width:100%;border-radius:6px;background:#fff}
+.row figure img{max-width:420px} figcaption{font-size:.85em;color:#9fb3d9}
+table{border-collapse:collapse;width:100%;font-size:.92em} td,th{border-bottom:1px solid #2a355e;padding:6px;text-align:left}
+code{background:#24305a;padding:1px 5px;border-radius:4px} .note{border-left:4px solid #ffd479;padding-left:12px}
+</style></head><body>
+<header>
+<h1>SphereBlink</h1>
+<div class="tag">Blink NASA SPHEREx images of any patch of sky to spot things that move or change. NASA Space Apps 2026 · Challenge: <a href="https://www.spaceappschallenge.org/2026/challenges/planet-x-and-spherex/">Planet X and SPHEREx</a> · Team NearIR Scout (San Jose, CA)</div>
+</header>
+<main>
+<section class="card">
+<h2>What this is</h2>
+<p>SPHEREx scans the whole sky every six months in 102 near-infrared colours. Like Clyde Tombaugh blinking photographic plates, SphereBlink puts the visits of one small patch of sky in time order and plays them as a short animation, so a star that moves (or changes brightness) stands out against the fixed background.</p>
+<p>Given a target name or RA/Dec, the tool: (1) asks NASA/IPAC IRSA's Simple Image Access service for every SPHEREx DR1 and QR3 image covering it; (2) downloads small cutouts of one detector band; (3) subtracts the zodiacal-light model, masks bad pixels from the FLAGS plane (but keeps saturated star cores visible), and reads the exact wavelength at the target from each image's wavelength map; (4) re-projects every visit onto one common sky grid; (5) measures the target's position and brightness in each visit and in median stacks of each survey pass; (6) makes the blink animations and plots below, with the catalog proper-motion prediction overlaid.</p>
+<p class="note">This page is a <b>static snapshot</b> of real results computed on 15 Nov 2026 from live IRSA data. The full tool (Python + Streamlit) queries the archive live for any RA/Dec. Anything that seems to move or change is a <i>candidate</i>, not a discovery.</p>
+</section>
+<section class="card"><h2>Results on the five challenge test targets</h2>
+<table><tr><th>Target</th><th>Band</th><th>Visits</th><th>Measured shift (first→last epoch)</th><th>Predicted from catalog</th><th>Verdict</th></tr>
+<tr><td><a href='#barnard_s_star_d5'>Barnard&#x27;s Star</a></td><td>SPHEREx-D5</td><td>48</td><td>10.22"</td><td>10.3"</td><td>Moves — clearly visible.</td></tr>
+<tr><td><a href='#epsilon_indi_b_d5'>Epsilon Indi B</a></td><td>SPHEREx-D5</td><td>42</td><td>6.52"</td><td>6.68"</td><td>Moves — visible, matches catalog.</td></tr>
+<tr><td><a href='#wise_0855_d6'>WISE 0855</a></td><td>SPHEREx-D6</td><td>45</td><td>8.39"</td><td>7.97"</td><td>Faint; motion measured, hard to see by eye. <span class='small'>(first epoch has only 3 frames and is unreliable; between the two reliable epochs: 3.3″ measured vs 3.6″ predicted)</span></td></tr>
+<tr><td><a href='#rw_aurigae_d1'>RW Aurigae</a></td><td>SPHEREx-D1</td><td>48</td><td>0.21"</td><td>0.02"</td><td>Does not move; candidate brightening.</td></tr>
+<tr><td><a href='#r_draconis_d1'>R Draconis</a></td><td>SPHEREx-D1</td><td>48</td><td>0.54"</td><td>0.02"</td><td>Does not move; too bright to measure brightness.</td></tr>
+</table>
+<p class="small">Bands: D1 0.75–1.1 µm, D5 3.8–4.4 µm, D6 4.4–5.0 µm. One SPHEREx pixel = 6.15″. Shifts are from the median-stack centroids.</p>
+</section>
+
+<section class="card" id="barnard_s_star_d5">
+ <h2>Barnard&#x27;s Star <span class="band">SPHEREx-D5</span></h2>
+ <p class="verdict">Moves — clearly visible.</p>
+ <p class="meta">48 SPHEREx visits (DR1, QR3), 2025-08-21 → 2026-09-22 UTC, 3 survey epochs. Field 0.05° (3′), north up, east left.</p>
+ <div class="row">
+  <figure><img src="assets/barnard_s_star_d5/barnard_s_star_blink_epochs.gif" alt="Blink of epoch median stacks for Barnard&#x27;s Star"><figcaption>Epoch stacks (median of each survey pass)</figcaption></figure>
+  <figure><img src="assets/barnard_s_star_d5/barnard_s_star_blink_all_visits.gif" alt="Blink of every visit for Barnard&#x27;s Star"><figcaption>Every visit in time order (wavelength changes visit to visit)</figcaption></figure>
+ </div>
+ <p>Barnard&#x27;s Star visibly moves north between the three epoch stacks. Epoch 1 to epoch 3 shift: 10.22&quot; in 0.99 yr; the Gaia catalog proper motion predicts 10.3&quot;. Fitted rate from the stacks: Dec 9.99 ± 0.42&quot;/yr (catalog 10.362); RA -2.66 ± 0.56&quot;/yr (catalog -0.802). The RA part is less accurate because the star is saturated in every SPHEREx frame, so its centroid jitters by about ±2&quot; visit to visit. Saturation also means no brightness measurement.</p>
+ <figure class="wide"><img src="assets/barnard_s_star_d5/barnard_s_star_motion.png" alt="Position versus time"><figcaption>Measured position vs time; cyan line = catalog proper-motion prediction.</figcaption></figure>
+ <figure class="wide"><img src="assets/barnard_s_star_d5/barnard_s_star_lightcurve.png" alt="Brightness versus time and wavelength"><figcaption>Aperture flux vs time (colour = wavelength) and vs wavelength per epoch. Red × / open circles = saturated.</figcaption></figure>
+ <figure class="wide"><img src="assets/barnard_s_star_d5/barnard_s_star_first_last_diff.png" alt="First and last epoch and difference"><figcaption>First vs last epoch and their difference: a mover leaves a red/blue pair.</figcaption></figure>
+ <p class="small"><a href="assets/barnard_s_star_d5/barnard_s_star_summary.json">Full numbers and per-visit metadata (JSON)</a></p>
+</section>
+
+<section class="card" id="epsilon_indi_b_d5">
+ <h2>Epsilon Indi B <span class="band">SPHEREx-D5</span></h2>
+ <p class="verdict">Moves — visible, matches catalog.</p>
+ <p class="meta">42 SPHEREx visits (DR1, QR3), 2025-04-24 → 2026-10-02 UTC, 5 survey epochs. Field 0.05° (3′), north up, east left.</p>
+ <div class="row">
+  <figure><img src="assets/epsilon_indi_b_d5/epsilon_indi_b_blink_epochs.gif" alt="Blink of epoch median stacks for Epsilon Indi B"><figcaption>Epoch stacks (median of each survey pass)</figcaption></figure>
+  <figure><img src="assets/epsilon_indi_b_d5/epsilon_indi_b_blink_all_visits.gif" alt="Blink of every visit for Epsilon Indi B"><figcaption>Every visit in time order (wavelength changes visit to visit)</figcaption></figure>
+ </div>
+ <p>Epsilon Indi B (an unresolved pair of brown dwarfs) moves south-east. First to last epoch: 6.52&quot; in 1.426 yr vs 6.68&quot; predicted. Stack fit: RA 3.56 ± 0.31&quot;/yr, Dec -2.84 ± 0.3&quot;/yr (catalog 3.982, -2.467). Brightness at matched wavelength (3.8–4.4 µm) stays the same within about 5% between epochs (ratios 0.95–1.05), so no variability is claimed.</p>
+ <figure class="wide"><img src="assets/epsilon_indi_b_d5/epsilon_indi_b_motion.png" alt="Position versus time"><figcaption>Measured position vs time; cyan line = catalog proper-motion prediction.</figcaption></figure>
+ <figure class="wide"><img src="assets/epsilon_indi_b_d5/epsilon_indi_b_lightcurve.png" alt="Brightness versus time and wavelength"><figcaption>Aperture flux vs time (colour = wavelength) and vs wavelength per epoch. Red × / open circles = saturated.</figcaption></figure>
+ <figure class="wide"><img src="assets/epsilon_indi_b_d5/epsilon_indi_b_first_last_diff.png" alt="First and last epoch and difference"><figcaption>First vs last epoch and their difference: a mover leaves a red/blue pair.</figcaption></figure>
+ <p class="small"><a href="assets/epsilon_indi_b_d5/epsilon_indi_b_summary.json">Full numbers and per-visit metadata (JSON)</a></p>
+</section>
+
+<section class="card" id="wise_0855_d6">
+ <h2>WISE 0855 <span class="band">SPHEREx-D6</span></h2>
+ <p class="verdict">Faint; motion measured, hard to see by eye.</p>
+ <p class="meta">45 SPHEREx visits (DR1), 2025-05-05 → 2026-05-11 UTC, 3 survey epochs. Field 0.05° (3′), north up, east left.</p>
+ <div class="row">
+  <figure><img src="assets/wise_0855_d6/wise_0855_blink_epochs.gif" alt="Blink of epoch median stacks for WISE 0855"><figcaption>Epoch stacks (median of each survey pass)</figcaption></figure>
+  <figure><img src="assets/wise_0855_d6/wise_0855_blink_all_visits.gif" alt="Blink of every visit for WISE 0855"><figcaption>Every visit in time order (wavelength changes visit to visit)</figcaption></figure>
+ </div>
+ <p>WISE 0855 is faint and only shows up at the longest wavelengths (4.4–5.0 µm, band D6). It is detected in the Nov–Dec 2025 and Apr–May 2026 stacks (S/N ≈ 30); the May 2025 stack has only 3 frames and is not a reliable detection. Between the two good epochs it shifts about 3.3&quot; west vs 3.6&quot; predicted — about half a SPHEREx pixel, so the blink alone does not make it obvious; the centroid measurement does. Stack fit RA -7.84 ± 1.0&quot;/yr (catalog -8.124) leans on the weak first epoch. In band D5 the measurement disagrees more (6.1&quot; vs 8.1&quot; predicted), probably blending/low signal — treated as unreliable. Note: the challenge-page coordinates are an old (≈2010) position; by 2025–26 the object is ≈2.1′ west of it, so SphereBlink propagates the proper motion.</p>
+ <figure class="wide"><img src="assets/wise_0855_d6/wise_0855_motion.png" alt="Position versus time"><figcaption>Measured position vs time; cyan line = catalog proper-motion prediction.</figcaption></figure>
+ <figure class="wide"><img src="assets/wise_0855_d6/wise_0855_lightcurve.png" alt="Brightness versus time and wavelength"><figcaption>Aperture flux vs time (colour = wavelength) and vs wavelength per epoch. Red × / open circles = saturated.</figcaption></figure>
+ <figure class="wide"><img src="assets/wise_0855_d6/wise_0855_first_last_diff.png" alt="First and last epoch and difference"><figcaption>First vs last epoch and their difference: a mover leaves a red/blue pair.</figcaption></figure>
+ <p class="small"><a href="assets/wise_0855_d6/wise_0855_summary.json">Full numbers and per-visit metadata (JSON)</a></p>
+</section>
+
+<section class="card" id="rw_aurigae_d1">
+ <h2>RW Aurigae <span class="band">SPHEREx-D1</span></h2>
+ <p class="verdict">Does not move; candidate brightening.</p>
+ <p class="meta">48 SPHEREx visits (DR1, QR3), 2025-09-01 → 2026-09-09 UTC, 3 survey epochs. Field 0.05° (3′), north up, east left.</p>
+ <div class="row">
+  <figure><img src="assets/rw_aurigae_d1/rw_aurigae_blink_epochs.gif" alt="Blink of epoch median stacks for RW Aurigae"><figcaption>Epoch stacks (median of each survey pass)</figcaption></figure>
+  <figure><img src="assets/rw_aurigae_d1/rw_aurigae_blink_all_visits.gif" alt="Blink of every visit for RW Aurigae"><figcaption>Every visit in time order (wavelength changes visit to visit)</figcaption></figure>
+ </div>
+ <p>RW Aurigae stays put (0.21&quot; first-to-last vs 0.02&quot; expected; a nearby field star moved 0.39&quot;), as a non-moving test should. Its core saturates in 32 of 48 frames. Using only unsaturated frames at matched wavelength (~0.74–0.78 µm) the aperture flux rose from ≈74–89 mJy (Sep 2025) to ≈116–125 mJy (Mar 2026) to ≈181–193 mJy (Sep 2026): a candidate ~2× brightening. Caveats: few matched pairs, ±20–30% scatter between neighbouring wavelengths, no aperture correction, A+B blended. RW Aur is a known strongly variable young star, but this is not a confirmed measurement.</p>
+ <figure class="wide"><img src="assets/rw_aurigae_d1/rw_aurigae_motion.png" alt="Position versus time"><figcaption>Measured position vs time; cyan line = catalog proper-motion prediction.</figcaption></figure>
+ <figure class="wide"><img src="assets/rw_aurigae_d1/rw_aurigae_lightcurve.png" alt="Brightness versus time and wavelength"><figcaption>Aperture flux vs time (colour = wavelength) and vs wavelength per epoch. Red × / open circles = saturated.</figcaption></figure>
+ <figure class="wide"><img src="assets/rw_aurigae_d1/rw_aurigae_first_last_diff.png" alt="First and last epoch and difference"><figcaption>First vs last epoch and their difference: a mover leaves a red/blue pair.</figcaption></figure>
+ <p class="small"><a href="assets/rw_aurigae_d1/rw_aurigae_summary.json">Full numbers and per-visit metadata (JSON)</a></p>
+</section>
+
+<section class="card" id="r_draconis_d1">
+ <h2>R Draconis <span class="band">SPHEREx-D1</span></h2>
+ <p class="verdict">Does not move; too bright to measure brightness.</p>
+ <p class="meta">48 SPHEREx visits (DR1, QR3), 2025-06-06 → 2026-07-16 UTC, 3 survey epochs. Field 0.05° (3′), north up, east left.</p>
+ <div class="row">
+  <figure><img src="assets/r_draconis_d1/r_draconis_blink_epochs.gif" alt="Blink of epoch median stacks for R Draconis"><figcaption>Epoch stacks (median of each survey pass)</figcaption></figure>
+  <figure><img src="assets/r_draconis_d1/r_draconis_blink_all_visits.gif" alt="Blink of every visit for R Draconis"><figcaption>Every visit in time order (wavelength changes visit to visit)</figcaption></figure>
+ </div>
+ <p>R Draconis does not move (0.54&quot; first-to-last, within the noise). It is saturated in all six SPHEREx bands in every frame we checked, so this simple aperture photometry cannot measure its (known) Mira variability. That would need PSF-wing photometry — listed as future work.</p>
+ <figure class="wide"><img src="assets/r_draconis_d1/r_draconis_motion.png" alt="Position versus time"><figcaption>Measured position vs time; cyan line = catalog proper-motion prediction.</figcaption></figure>
+ <figure class="wide"><img src="assets/r_draconis_d1/r_draconis_lightcurve.png" alt="Brightness versus time and wavelength"><figcaption>Aperture flux vs time (colour = wavelength) and vs wavelength per epoch. Red × / open circles = saturated.</figcaption></figure>
+ <figure class="wide"><img src="assets/r_draconis_d1/r_draconis_first_last_diff.png" alt="First and last epoch and difference"><figcaption>First vs last epoch and their difference: a mover leaves a red/blue pair.</figcaption></figure>
+ <p class="small"><a href="assets/r_draconis_d1/r_draconis_summary.json">Full numbers and per-visit metadata (JSON)</a></p>
+</section>
+<section class="card"><h2>How to read the animations</h2>
+<ul><li><b>Green ticks</b> mark a fixed point on the sky (the target's catalog position at the middle of the time span). A mover drifts relative to them.</li>
+<li><b>Cyan circle</b>: where the catalog proper motion says the target should be on that date. <b>Orange +</b>: where SphereBlink measured it.</li>
+<li>Each SPHEREx detector has a linear variable filter, so every visit sees the target at a slightly different wavelength (shown in the label). Brightness is only compared at matched wavelength.</li></ul>
+</section>
+<section class="card"><h2>Limits (honest list)</h2>
+<ul><li>Bright stars (Barnard's Star, R Dra, most of RW Aur) saturate SPHEREx; their brightness cannot be measured by this simple method, and their centroids are noisier.</li>
+<li>Motions of a fraction of a pixel (WISE 0855 over 6 months) are measurable but hard to see by eye.</li>
+<li>Aperture fluxes are not aperture-corrected or colour-corrected; use them for relative changes only.</li>
+<li>SPHEREx data releases are still being added (DR1 + QR3 as of Nov 2026); results will change as more visits arrive.</li></ul></section>
+<section class="card"><h2>Data, code and credits</h2>
+<p>Data: NASA SPHEREx Level-2 spectral images (collections <code>spherex_dr1</code>, <code>spherex_qr3</code>) from <a href="https://irsa.ipac.caltech.edu/Missions/spherex.html">NASA/IPAC Infrared Science Archive (IRSA)</a>, via <a href="https://irsa.ipac.caltech.edu/spherex-archive-documentation/spherex-data-access/">SIA2 and the cutout service</a>. Target positions and proper motions: SIMBAD (Gaia EDR3; Kirkpatrick et al. 2021 for WISE 0855; van Leeuwen 2007 for RW Aur).</p>
+<p>This publication makes use of data products from the Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer (SPHEREx), which is a joint project of the Jet Propulsion Laboratory and the California Institute of Technology, and is funded by the National Aeronautics and Space Administration.</p>
+<p>Code: Python, numpy, scipy, astropy, matplotlib, Pillow, requests, Streamlit, ffmpeg. AI disclosure: an AI assistant helped write code and text; the team member directed, reviewed and tested the work. All numbers on this page come from the real outputs. Not an official NASA product.</p>
+</section>
+</main>
+<footer><p class="small">SphereBlink · Team NearIR Scout · NASA Space Apps Challenge 2026</p></footer>
+</body></html>
